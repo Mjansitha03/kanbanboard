@@ -1,16 +1,129 @@
-# React + Vite
+# 🗂️ Kanban Task Board  
+A modern, responsive, and user-friendly task management application built using **React**, **Tailwind CSS v4**, and **react-beautiful-dnd** for drag-and-drop interaction.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project supports:
+- ✅ Dark & Light Mode (with localStorage persistence)  
+- ✅ Add, Edit, Delete Tasks  
+- ✅ Drag & Drop between columns  
+- ✅ Priority & Due-Date Filtering  
+- ✅ Smooth Glass-Morphism UI  
+- ✅ Fully responsive layout  
+- ✅ Vercel ready for deployment  
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✨ Task Management  
+- Add new tasks  
+- Edit existing tasks inside a modal  
+- Delete tasks instantly  
+- Auto-save updates to localStorage  
 
-## React Compiler
+### 🧩 Columns (Kanban Style)  
+- **To Do**  
+- **In Progress**  
+- **Done**  
+- Drag tasks between columns using react-beautiful-dnd  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎨 UI & Design  
+- Clean Glass-Morphism components  
+- Animated Modals  
+- Smooth transitions  
+- Tailwind v4 Scrollbar plugin  
+- Fully dark-mode-compatible design  
 
-## Expanding the ESLint configuration
+### 🌓 Dark Mode Support  
+- Supports **dark and light theme switching**  
+- Theme saved in `localStorage`  
+- Automatic theme detection  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Technology              | Purpose               |
+|-------------------------|-----------------------|
+| **React**               | Frontend UI           |
+| **React Router**        | Page navigation       |
+| **Tailwind CSS v4**     | Styling               |
+| **react-beautiful-dnd** | Drag & drop           |
+| **localStorage**        | Persist tasks & theme |
+| **Vercel**              | Deployment            |
+
+---
+
+## 📁 Folder Structure
+
+```
+
+src/
+├── assets/
+|    ├── favicon.png
+│    ├── hero-image.png
+|
+├── Components/
+│    ├── AddTaskForm.jsx
+|    ├── Column.jsx
+|    ├── FilterBar.jsx
+|    ├── Navbar.jsx
+│    ├── TaskCard.jsx
+│    └──  TaskModal.jsx
+│
+├── Context/
+|    ├── TaskContext.jsx
+│    └── TaskProvider.jsx
+│
+├── Pages/
+|    ├── AddTaskPage.jsx
+│    ├── BoardPage.jsx
+│    └── HomePage.jsx
+│
+├── Router/
+|   └── AppRouter.jsx
+|
+├── index.css
+├── App.jsx
+├── main.jsx
+
+
+## ⚙️ Installation
+    
+### 1️⃣ Clone the repository
+
+```sh
+git clone https://github.com/Mjansitha03/kanbanboard.git.
+cd kanban-board
+````
+
+### 2️⃣ Install dependencies
+
+```sh
+npm install
+```
+
+### 3️⃣ Start development server
+
+```sh
+npm run dev
+```
+
+### 4️⃣ Build for production
+
+```sh
+npm run build
+```
+
+---
+
+## ✨ Future Improvements
+
+* Task search bar
+* User authentication
+* Subtasks
+* Drag-to-resize columns
+* Firebase backend integration
+
+
+
+
+
+
