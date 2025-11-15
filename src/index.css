@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+/* Scrollbar plugin */
+@plugin "tailwind-scrollbar" {
+  nocompatible: true;
+}
+
+/* Light mode theme values */
+:root {
+  --bg-gradient: linear-gradient(135deg, #dfe9f3, #fff);
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --text-color: #1f2937;
+}
+
+/* Dark mode theme values */
+.dark {
+  --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b);
+  --glass-bg: rgba(30, 41, 59, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-color: #e5e7eb;
+}
+
+/* App background + smooth transitions */
+body {
+  @apply min-h-screen bg-cover bg-center;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  transition: background 0.4s, color 0.3s;
+}
+
+/* Glass card styling */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+/* Form elements in dark mode */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #0f172a !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown options (dark mode) */
+.dark option {
+  background-color: #0f172a !important;
+  color: #fff !important;
+}
+
+/* Left content text (dark mode) */
+.dark .left-content {
+  color: #fff;
+}
+
+/* Close button default in dark */
+.dark .cross-btn {
+  color: #fff;
+}
+
+/* Close button hover in dark */
+.dark .cross-btn:hover {
+  color: red;
+}
+
+/* Date picker icon (dark mode fix) */
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+/* Placeholder color (dark mode) */
+.dark ::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+/* Modal animation */
+.modal-container {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
